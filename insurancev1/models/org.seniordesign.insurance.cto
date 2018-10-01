@@ -24,13 +24,14 @@ asset InsuranceCo identified by companyID {
 
 participant Adjuster identified by adjusterID {
   o String adjusterID
+  o Contact contactInfo
 }
 
 concept Contact {
   o String fName
   o String lName
   o String email
-  o String address
+  o String officeAddress
   o Integer age
 }
 participant Insured identified by insuredID {

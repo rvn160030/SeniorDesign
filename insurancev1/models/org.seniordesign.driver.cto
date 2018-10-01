@@ -1,0 +1,20 @@
+/** This cto represents the types of information
+saved about the driver and their vehicle(s)*/
+
+namespace org.seniordesign.driver.cto
+
+participant Driver identified by policyID {
+  o String policyID
+  o Contact contact
+  o Double driverScore
+  //o Adjuster agent
+  //--> Vehcile[] vehicles
+}
+
+concept Contact {
+  o String fName
+  o String lName
+  o String email
+  o String homeAddress
+  o Integer age
+}
