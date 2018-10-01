@@ -1,0 +1,34 @@
+/** This cto represents the types of information
+saved about drivers' vehicles, and the data collected
+by them */
+
+namespace org.seniordesign.vehicle
+
+asset Vehicle identified by VIN {
+  o String VIN
+  o VehicleType vehcileType
+}
+
+participant VehicleBlackBox identified by blackBoxVIN {
+  o String blackBoxVIN
+  o DrivingLog dailyLog
+}
+
+concept DrivingLog {
+  o DateTime timeSubmitted
+  o Double avgSpeed
+  o Double totalDriveTimeMins
+  o Double avgBrakingForce
+  o Double avgAccelerationForce
+}
+enum VehicleType {
+  o TRUCK
+  o SUV
+  o VAN
+  o MINIVAN
+  o WAGON
+  o SEDAN
+  o COUPE
+  o CABRIOLET
+  o ROADSTER
+}
