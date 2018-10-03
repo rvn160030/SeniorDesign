@@ -6,7 +6,9 @@ namespace org.seniordesign.vehicle
 
 asset Vehicle identified by VIN {
   o String VIN
-  o VehicleType vehcileType
+  o VehicleType vehicleType
+  o CrashLog crashLog
+  
 }
 
 participant VehicleBlackBox identified by blackBoxVIN {
@@ -23,10 +25,15 @@ event DailyLogCreated {
 }
 
 transaction CreateCrashLog {
+  o DateTime time
+  o Double speed
+  o Integer passengers
+  
 
 }
 
 event CrashLogCreated {
+ 
 
 }
 
