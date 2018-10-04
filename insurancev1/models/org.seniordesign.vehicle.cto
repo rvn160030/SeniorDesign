@@ -6,7 +6,7 @@ namespace org.seniordesign.vehicle
 
 asset Vehicle identified by VIN {
   o String VIN
-  o VehicleType vehicleType
+  
   o CrashLog crashLog
   
 }
@@ -28,12 +28,14 @@ transaction CreateCrashLog {
   o DateTime time
   o Double speed
   o Integer passengers
+  o String VIN
+  o Boolean airbagDeployment
   
 
 }
 
 event CrashLogCreated {
- 
+ o String crashID
 
 }
 
