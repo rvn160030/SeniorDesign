@@ -16,14 +16,6 @@ participant VehicleBlackBox identified by blackBoxVIN {
   o DrivingLog dailyLog
 }
 
-transaction CreateDailyLog {
-  /**This is where the transaction will be defined */
-}
-
-event DailyLogCreated {
-  /**This is where the event will be defined */
-}
-
 transaction CreateCrashLog {
   o DateTime time
   o Double speed
