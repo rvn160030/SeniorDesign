@@ -7,6 +7,8 @@ namespace org.seniordesign.vehicle
 asset Vehicle identified by VIN {
   o String VIN
   o VehicleType vehcileType
+  o CrashLog[] crashLogs
+  o DrivingLog[] drivingLogs
 }
 
 participant VehicleBlackBox identified by blackBoxVIN {
