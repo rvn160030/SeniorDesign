@@ -1,6 +1,7 @@
 
-from flask import render_template, Flask, request
+from flask import render_template, Flask, request, jsonify
 import requests
+
 
 app = Flask(__name__)
 app.secret_key = "123456"
@@ -31,7 +32,8 @@ def police():
     response = requests.get(url)
     data= response.json()
 
-    return  render_template('police.html', text=data)
+    #return  render_template('police.html', text=data)
+    return jsonify(**data)
 
 @app.route('/insurance', methods=['GET'])
 def insurance():
@@ -45,7 +47,5 @@ def insurance():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
-    #Testing 123
-
+    app.run(host="0.0.0.0", port=80, debug=True)
 # ====================
