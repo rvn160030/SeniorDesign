@@ -1,6 +1,7 @@
 
 from flask import render_template, Flask, request, jsonify
 import requests
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -31,9 +32,10 @@ def police():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     response = requests.get(url)
     data= response.json()
+    df = pd.read_json(data)
 
-    #return  render_template('police.html', text=data)
-    return jsonify(**data)
+    return  render_template('police.html', data=df.to_html())
+
 
 @app.route('/insurance', methods=['GET'])
 def insurance():

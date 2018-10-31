@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <div class="results">
-    <pre>{{ text }}</pre>
+  <div class="jumbotron text-center">
+   {{data | safe}}
   </div>
 {% endblock %}
