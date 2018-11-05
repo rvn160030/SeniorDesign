@@ -18,7 +18,7 @@
 
 namespace org.seniordesign.insurance
 
-asset InsuranceCo identified by companyID {
+participant InsuranceCo identified by companyID {
   o String companyID
 }
 
