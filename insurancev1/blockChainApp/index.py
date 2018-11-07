@@ -1,5 +1,6 @@
 
-from flask import render_template, Flask, request, jsonify
+from flask import render_template, Flask, request
+import json
 import requests
 import pandas as pd
 
@@ -18,7 +19,7 @@ def driver():
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
 
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "9999", "vehcileType": "SUV"}'
+        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "9999", "type": "SUV", "crashLog": [] }'
 
         requests.post(url, data=data, headers=headers)
 
@@ -31,10 +32,9 @@ def driver():
 def police():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     response = requests.get(url)
-    data= response.json()
-    df = pd.read_json(data)
+    data = json.dumps(response)
 
-    return  render_template('police.html', data=df.to_html())
+    return  render_template('police.html', data=data)
 
 
 @app.route('/insurance', methods=['GET'])
