@@ -3,11 +3,16 @@
 {% block body %}
   <table>
   {% for value in data %}
-    <tr>
-         <td> {{ value['VIN'] }} </td>
-         <td> {{ value['type'] }} </td>
-         <td> {{ value['crashLog'] }} </td>
-    </tr>
+      <tr>
+          <th>VIN</th>
+          <th>Type</th>
+          <th>crashLog</th>
+      </tr>
+      <tr>
+          <td> {{ value['VIN'] }} </td>
+          <td> {{ value['type'] }} </td>
+          <td> {{ value['crashLog'] }} </td>
+      </tr>
   {%  endfor %}
   </table>
 {% endblock %}
