@@ -33,7 +33,7 @@ def police():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     response = requests.get(url)
     json_data = response.json()
-    data = json.loads(json_data)
+    data = json.dump(json_data)
 
 
     return  render_template('police.html', data=data)
