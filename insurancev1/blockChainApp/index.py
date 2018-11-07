@@ -17,7 +17,7 @@ def driver():
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
 
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "2323", "type": "SUV", "crashLog": [] }'
+        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "23", "type": "SUV", "crashLog": [] }'
 
         requests.post(url, data=data, headers=headers)
 
