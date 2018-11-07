@@ -1,7 +1,24 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <div class="jumbotron text-center">
-    <p class="lead">{{text}}</p>
-  </div>
+  <table>
+       <tr>
+           <th>Passengers</th>
+           <th>Airbag Deployment</th>
+           <th>VIN</th>
+           <th>Time</th>
+           <th>Speed</th>
+           <th>Crash ID</th>
+      </tr>
+  {% for value in data %}
+      <tr>
+          <td> {{ value['passengers'] }} </td>
+          <td> {{ value['airbagDeployment'] }} </td>
+          <td> {{ value['VIN'] }} </td>
+          <td> {{ value['time'] }} </td>
+          <td> {{ value['speed'] }} </td>
+          <td> {{ value['crashID'] }} </td>
+      </tr>
+  {%  endfor %}
+  </table>
 {% endblock %}
