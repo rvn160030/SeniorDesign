@@ -23,8 +23,7 @@ def driver():
 
         url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
         headers2 = {'Content-type': 'application/json'}
-        data2 = '{"$class": "org.seniordesign.crashLog.CreateCrashLog", "time": "2018-11-07T22:20:12.231Z", "speed": 86, "passengers": 4, "VIN": "2323", "airbagDeployment": True, "timestamp": "2018-11-07T22:20:12.231Z" }'
-
+        data2 =  '{"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 0, "passengers": 0, "VIN": "2323", "airbagDeployment": true, "timestamp": "2018-11-07T20:41:32.308Z"}'
         requests.post(url2, data=data2, headers=headers2)
 
         return render_template('index.html')
