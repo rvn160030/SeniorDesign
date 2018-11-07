@@ -47,7 +47,7 @@ def insurance():
     response = requests.get(url)
     data = response.json()
 
-    return  render_template('insurance.html', text=data)
+    return  render_template('insurance.html', data=data)
 
 
 
