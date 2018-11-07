@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed892bf2-a068-4338-905a-ca3c24f9aad1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,28 +120,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="109" />
-          <entry key="py" value="380" />
-          <entry key="txt" value="229" />
+          <entry key="html" value="113" />
+          <entry key="py" value="421" />
+          <entry key="txt" value="239" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="109" />
-          <entry key="PLAIN_TEXT" value="229" />
-          <entry key="Python" value="380" />
+          <entry key="HTML" value="113" />
+          <entry key="PLAIN_TEXT" value="239" />
+          <entry key="Python" value="421" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bna" value="1" />
-          <entry key="html" value="7" />
+          <entry key="html" value="8" />
           <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="2" />
         </counts>
@@ -152,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="525">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#1#59#0" expanded="true" />
               </folding>
@@ -164,8 +165,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/police.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="60">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/insurance.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="5" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -195,8 +205,8 @@
         <option value="$PROJECT_DIR$/templates/driver.html" />
         <option value="$PROJECT_DIR$/templates/insurance.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/templates/police.html" />
+        <option value="$PROJECT_DIR$/index.py" />
       </list>
     </option>
   </component>
@@ -206,11 +216,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
-    <option name="y" value="6" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="y" value="7" />
+    <option name="width" value="1910" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -511,14 +521,56 @@
       <option name="project" value="LOCAL" />
       <updated>1541626579354</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Trying again to make the display work in a nice manner part 18">
+      <created>1541626871806</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1541626871806</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Trying again to make the display work in a nice manner part 19">
+      <created>1541626923527</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1541626923527</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Trying again to make the display work in a nice manner part 20">
+      <created>1541626990855</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1541626990855</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Trying again to make the display work in a nice manner part 21">
+      <created>1541627041065</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1541627041065</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Trying again to make the display work in a nice manner part 22">
+      <created>1541627069885</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1541627069885</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Trying again to make the display work in a nice manner part 23">
+      <created>1541627543934</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541627543934</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="6" width="1920" height="1053" extended-state="6" />
+    <frame x="1920" y="7" width="1910" height="1051" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13767342" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13841201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
@@ -562,7 +614,13 @@
     <MESSAGE value="Think I fixed it this time" />
     <MESSAGE value="Trying again to make the display work in a nice manner" />
     <MESSAGE value="Trying again to make the display work in a nice manner part 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying again to make the display work in a nice manner part 17" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 18" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 19" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 20" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 21" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 22" />
+    <MESSAGE value="Trying again to make the display work in a nice manner part 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying again to make the display work in a nice manner part 23" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/base.html" />
@@ -595,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/insurance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/_navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -619,17 +670,24 @@
     <entry file="file://$USER_HOME$/Downloads/insurancev10.0.1.bna">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/insurance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/police.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#1#59#0" expanded="true" />
           </folding>
