@@ -21,12 +21,11 @@ def driver():
 
         requests.post(url, data=data, headers=headers)
 
-        url = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
-        headers = {'Content-type': 'application/json'}
-        data = '{"$class": "org.seniordesign.crashLog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 86,' \
-               '"passengers": 4, "VIN": "2323", "airbagDeployment": True, "timestamp":  "2018-11-07T20:41:32.307Z"}'
+        url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
+        headers2 = {'Content-type': 'application/json'}
+        data2 = '{"$class": "org.seniordesign.crashLog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 86, "passengers": 4, "VIN": "2323", "airbagDeployment": True, "timestamp": "2018-11-07T20:41:32.307Z"}'
 
-        requests.post(url, data=data, headers=headers)
+        requests.post(url2, data=data2, headers=headers2)
 
         return render_template('index.html')
 
