@@ -32,7 +32,8 @@ def driver():
 def police():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     response = requests.get(url)
-    data = json.loads(response.json())
+    data = json.dumps(json.loads(response))
+
 
     return  render_template('police.html', data=data)
 
