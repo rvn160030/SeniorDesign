@@ -10,14 +10,13 @@
   {% for value in data %}
       <tr>
           <td> {{ value['type'] }} </td>
-          <td> Test </td>
+          <td> {{ value['VIN'] }} </td>
       </tr>
   {%  endfor %}
   </table>
 
   <table>
        <tr>
-           <th>Crash ID</th>
            <th>Time</th>
            <th>Speed</th>
            <th>Passengers</th>
@@ -26,7 +25,6 @@
       </tr>
   {% for value2 in data2 %}
       <tr>
-          <td> {{ value2['crashID'] }} </td>
           <td> {{ value2['time'] }} </td>
           <td> {{ value2['speed'] }} </td>
           <td> {{ value2['passengers'] }} </td>
