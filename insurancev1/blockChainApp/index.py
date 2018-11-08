@@ -13,21 +13,19 @@ def index():
 
 @app.route('/driver', methods=['GET', 'POST'])
 def driver():
+    url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
+    headers = {'Content-type': 'application/json'}
+    data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "23", "type": "SUV", "crashLog": [] }'
+
+    url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
+    headers2 = {'Content-type': 'application/json'}
+    data2 = '{"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 0, "passengers": 0, "VIN": "2323", "airbagDeployment": true, "timestamp": "2018-11-07T20:41:32.308Z"}'
+
     if request.method == 'POST':
-        url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
-        headers = {'Content-type': 'application/json'}
-
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "23", "type": "SUV", "crashLog": [] }'
-
         requests.post(url, data=data, headers=headers)
-
-        url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
-        headers2 = {'Content-type': 'application/json'}
-        data2 =  '{"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 0, "passengers": 0, "VIN": "2323", "airbagDeployment": true, "timestamp": "2018-11-07T20:41:32.308Z"}'
         requests.post(url2, data=data2, headers=headers2)
 
         return render_template('index.html', data=data, data2=data2)
-
 
     return  render_template('driver.html')
 
