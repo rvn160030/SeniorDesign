@@ -25,9 +25,9 @@ def driver():
         requests.post(url, data=data, headers=headers)
         requests.post(url2, data=data2, headers=headers2)
 
-        return render_template('index.html', data=data, data2=data2)
+        return render_template('index.html')
 
-    return  render_template('driver.html')
+    return  render_template('driver.html', data=data, data2=data2)
 
 @app.route('/police', methods=['GET'])
 def police():
