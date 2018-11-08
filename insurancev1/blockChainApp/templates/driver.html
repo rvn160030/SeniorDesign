@@ -7,12 +7,10 @@
           <th>Type</th>
           <th>VIN</th>
       </tr>
-  {% for value in data %}
       <tr>
-          <td> {{ value['type'] }} </td>
-          <td> {{ value['VIN'] }} </td>
+          <td> {{ data['type'] }} </td>
+          <td> {{ data['VIN'] }} </td>
       </tr>
-  {%  endfor %}
   </table>
 
   <table>
@@ -23,15 +21,13 @@
            <th>Airbag Deployment</th>
            <th>VIN</th>
       </tr>
-  {% for value2 in data2 %}
       <tr>
-          <td> {{ value2['time'] }} </td>
-          <td> {{ value2['speed'] }} </td>
-          <td> {{ value2['passengers'] }} </td>
-          <td> {{ value2['airbagDeployment'] }} </td>
-          <td> {{ value2['VIN'] }} </td>
+          <td> {{ data2['time'] }} </td>
+          <td> {{ data2['speed'] }} </td>
+          <td> {{ data2['passengers'] }} </td>
+          <td> {{ data2['airbagDeployment'] }} </td>
+          <td> {{ data2['VIN'] }} </td>
       </tr>
-  {%  endfor %}
   </table>
 
   <form action="" method="POST">

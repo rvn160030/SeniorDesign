@@ -27,8 +27,7 @@ def driver():
         requests.post(url2, data=data2, headers=headers2)
 
         return render_template('index.html')
-    data3 = {"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "23", "type": "SUV", "crashLog": [] }
-    json_data = json.loads(data3)
+    json_data = json.loads(data)
     json_data2 = json.loads(data2)
 
     return  render_template('driver.html', data=json_data, data2=json_data2)
