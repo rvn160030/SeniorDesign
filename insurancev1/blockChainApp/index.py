@@ -1,6 +1,7 @@
 
 from flask import render_template, Flask, request
 import requests
+import json
 
 
 app = Flask(__name__)
@@ -26,8 +27,10 @@ def driver():
         requests.post(url2, data=data2, headers=headers2)
 
         return render_template('index.html')
+    json_data = json.dumps(data)
+    json_data2 = json.dumps(data2)
 
-    return  render_template('driver.html', data=data, data2=data2)
+    return  render_template('driver.html', data=json_data, data2=json_data2)
 
 @app.route('/police', methods=['GET'])
 def police():
