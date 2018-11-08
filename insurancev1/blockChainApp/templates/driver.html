@@ -24,20 +24,17 @@
            <th>Airbag Deployment</th>
            <th>VIN</th>
       </tr>
-  {% for value in data2 %}
+  {% for value2 in data2 %}
       <tr>
-          <td> {{ value['crashID'] }} </td>
-          <td> {{ value['time'] }} </td>
-          <td> {{ value['speed'] }} </td>
-          <td> {{ value['passengers'] }} </td>
-          <td> {{ value['airbagDeployment'] }} </td>
-          <td> {{ value['VIN'] }} </td>
+          <td> {{ value2['crashID'] }} </td>
+          <td> {{ value2['time'] }} </td>
+          <td> {{ value2['speed'] }} </td>
+          <td> {{ value2['passengers'] }} </td>
+          <td> {{ value2['airbagDeployment'] }} </td>
+          <td> {{ value2['VIN'] }} </td>
       </tr>
   {%  endfor %}
   </table>
-
-    <p class="lead">{{text}}</p>
-
 
   <form action="" method="POST">
       <p>Do you consent to have your information shared?</p>
