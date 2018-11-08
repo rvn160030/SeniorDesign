@@ -16,11 +16,11 @@ def index():
 def driver():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     headers = {'Content-type': 'application/json'}
-    data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "23", "type": "SUV", "crashLog": [] }'
+    data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "12345", "type": "SUV", "crashLog": [] }'
 
     url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
     headers2 = {'Content-type': 'application/json'}
-    data2 = '{"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 0, "passengers": 0, "VIN": "2323", "airbagDeployment": true, "timestamp": "2018-11-07T20:41:32.308Z"}'
+    data2 = '{"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": "2018-11-07T20:41:32.307Z", "speed": 90, "passengers": 3, "VIN": "12345", "airbagDeployment": false, "timestamp": "2018-11-07T20:41:32.308Z"}'
 
     if request.method == 'POST':
         requests.post(url, data=data, headers=headers)
