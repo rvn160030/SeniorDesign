@@ -7,12 +7,10 @@
           <th>Type</th>
           <th>VIN</th>
       </tr>
-  {% for value in data %}
       <tr>
-          <td> {{ value['type'] }} </td>
-          <td> {{ value['VIN'] }} </td>
+          <td> {{data['type']}} </td>
+          <td> {{data}} </td>
       </tr>
-  {%  endfor %}
   </table>
 
   <table>
