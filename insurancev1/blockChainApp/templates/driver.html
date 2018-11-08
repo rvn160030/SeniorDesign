@@ -2,15 +2,17 @@
 
 {% block body %}
 
-  <table>
+   <table>
        <tr>
           <th>Type</th>
           <th>VIN</th>
       </tr>
+  {% for value in data %}
       <tr>
-          <td> {{ data['type'] }} </td>
-          <td> {{data}} </td>
+          <td> {{ value['type'] }} </td>
+          <td> {{ value['VIN'] }} </td>
       </tr>
+  {%  endfor %}
   </table>
 
   <table>
