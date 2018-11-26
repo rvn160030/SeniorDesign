@@ -1,0 +1,25 @@
+namespace org.seniordesign.crashlog
+
+asset CrashLog identified by crashID {
+  o String crashID
+  o DateTime time
+  o Double speed
+  o Integer passengers
+  o Boolean airbagDeployment
+  o String VIN
+}
+
+transaction CreateCrashLog {
+  o DateTime time
+  o Double speed
+  o Integer passengers
+  o String VIN
+  o Boolean airbagDeployment
+}
+
+event CrashLogCreated {
+ o String crashID
+}
+
+
+

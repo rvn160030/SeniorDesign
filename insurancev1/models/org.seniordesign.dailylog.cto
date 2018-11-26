@@ -1,0 +1,28 @@
+namespace org.seniordesign.dailylog
+
+asset DrivingLog identified by dailyID {
+  o String dailyID
+  o DateTime timeSubmitted
+  o Double avgSpeed
+  o Double totalDriveTimeMins
+  o Double avgBrakingForce
+  o Double avgAccelerationForce
+  o String VIN
+  
+}
+
+transaction CreateDailyLog {
+  o DateTime timeSubmitted
+  o Double avgSpeed
+  o Double totalDriveTimeMins
+  o Double avgBrakingForce
+  o Double avgAccelerationForce
+  o String VIN
+  
+
+}
+
+event DailyLogCreated {
+ o String dailyID
+}
+

@@ -1,0 +1,42 @@
+/**
+This cto simulates a simple mechanic particpant and service transaction */
+
+namespace org.seniordesign.maintenance
+
+
+participant Mechanic identified by mechID {
+  o String mechID
+  o String fName
+  o String lName
+  o ServiceCenter srvCenter
+}
+
+concept ServiceCenter {
+  o Integer telephone
+  o String address
+  o String name
+}
+
+asset MaintenanceLog identified by serviceID {
+  o String serviceID
+  o ServiceType service
+  o DateTime time
+  o String mechID
+  o String VIN
+}
+
+enum ServiceType {
+  o OIL_CHANGE
+  o TIRE_ROTATION
+}
+
+transaction CreateMaintenanceLog {
+  o ServiceType service
+  o DateTime time
+  o String mechID
+  o String VIN
+}
+
+event MaintenanceLogCreated {
+  o String serviceID
+}

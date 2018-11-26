@@ -4,39 +4,22 @@ by them */
 
 namespace org.seniordesign.vehicle
 
+import org.seniordesign.crashlog.CrashLog
+import org.seniordesign.maintenance.MaintenanceLog
+import org.seniordesign.dailylog.DrivingLog
+
 asset Vehicle identified by VIN {
   o String VIN
-  
-  o CrashLog crashLog
-  
+  o VehicleType type
+  --> CrashLog[] crashLog optional
+  --> MaintenanceLog[] maintenanceLog optional
+  --> DrivingLog[] dailyLog optional
 }
 
 participant VehicleBlackBox identified by blackBoxVIN {
   o String blackBoxVIN
-  o DrivingLog dailyLog
 }
 
-transaction CreateCrashLog {
-  o DateTime time
-  o Double speed
-  o Integer passengers
-  o String VIN
-  o Boolean airbagDeployment
-  
-
-}
-
-event CrashLogCreated {
- o String crashID
-
-}
-
-concept CrashLog {
-  o DateTime time
-  o Double speed
-  o Integer passengers
-  o Boolean airbagDeployment
-}
 concept DrivingLog {
   o DateTime timeSubmitted
   o Double avgSpeed
