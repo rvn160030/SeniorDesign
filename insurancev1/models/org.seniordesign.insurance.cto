@@ -18,13 +18,20 @@
 
 namespace org.seniordesign.insurance
 
+<<<<<<< HEAD
+=======
+import org.seniordesign.driver.Driver
+
+>>>>>>> BaosBranch
 participant InsuranceCo identified by companyID {
   o String companyID
+  -->Adjuster[] adjusters
 }
 
 participant Adjuster identified by adjusterID {
   o String adjusterID
   o Contact contactInfo
+  -->Driver[] policyHolders
 }
 
 concept Contact {
@@ -33,9 +40,4 @@ concept Contact {
   o String email
   o String officeAddress
   o Integer age
-}
-participant Insured identified by insuredID {
-  o String insuredID
-  o Contact contact
-  o Integer numberOfVehicles
 }

@@ -4,40 +4,28 @@ by them */
 
 namespace org.seniordesign.vehicle
 
+import org.seniordesign.crashlog.CrashLog
+import org.seniordesign.maintenance.MaintenanceLog
+import org.seniordesign.dailylog.DrivingLog
+
 asset Vehicle identified by VIN {
   o String VIN
+<<<<<<< HEAD
   o VehicleType vehcileType
   o CrashLog[] crashLogs
   o DrivingLog[] drivingLogs
+=======
+  o VehicleType type
+  --> CrashLog[] crashLog optional
+  --> MaintenanceLog[] maintenanceLog optional
+  --> DrivingLog[] dailyLog optional
+>>>>>>> BaosBranch
 }
 
 participant VehicleBlackBox identified by blackBoxVIN {
   o String blackBoxVIN
-  o DrivingLog dailyLog
 }
 
-transaction CreateDailyLog {
-  /**This is where the transaction will be defined */
-}
-
-event DailyLogCreated {
-  /**This is where the event will be defined */
-}
-
-transaction CreateCrashLog {
-
-}
-
-event CrashLogCreated {
-
-}
-
-concept CrashLog {
-  o DateTime time
-  o Double speed
-  o Integer passengers
-  o Boolean airbagDeployment
-}
 concept DrivingLog {
   o DateTime timeSubmitted
   o Double avgSpeed
