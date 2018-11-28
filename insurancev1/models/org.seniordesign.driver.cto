@@ -1,14 +1,15 @@
 /** This cto represents the types of information
 saved about the driver and their vehicle(s)*/
 
-namespace org.seniordesign.driver.cto
+namespace org.seniordesign.driver
+
+import org.seniordesign.vehicle.Vehicle
 
 participant Driver identified by policyID {
   o String policyID
   o Contact contact
   o Double driverScore
-  //o Adjuster agent
-  //--> Vehcile[] vehicles
+  --> Vehicle[] vehicles
 }
 
 concept Contact {
