@@ -16,7 +16,7 @@ def index():
 def driver():
     url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
     headers = {'Content-type': 'application/json'}
-    data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "93617", "type": "Truck", "crashLog": [] }'
+    data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "93617", "type": "TRUCK", "crashLog": [] }'
 
     url2 = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
     headers2 = {'Content-type': 'application/json'}
