@@ -34,6 +34,7 @@ def driver():
         requests.post(url, data=data, headers=headers)
         requests.post(url2, data=data2, headers=headers2)
         requests.post(url3, data=data3, headers=headers3)
+        requests.post(url4, data=data4, headers=headers4)
 
         return render_template('index.html')
     json_data = json.loads(data)
@@ -54,6 +55,7 @@ def police():
     url3 = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
     response3 = requests.get(url3)
     data3 = response3.json()
+
 
 
     return  render_template('police.html', data=data, data2=data2, data3=data3)

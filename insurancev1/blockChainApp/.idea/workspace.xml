@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/police.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/police.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../insurancev10.0.1.bna" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,16 +121,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="701" />
-          <entry key="py" value="1159" />
-          <entry key="txt" value="385" />
+          <entry key="html" value="794" />
+          <entry key="py" value="1293" />
+          <entry key="txt" value="426" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="701" />
-          <entry key="PLAIN_TEXT" value="385" />
-          <entry key="Python" value="1159" />
+          <entry key="HTML" value="794" />
+          <entry key="PLAIN_TEXT" value="426" />
+          <entry key="Python" value="1293" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -152,11 +151,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+            <state relative-caret-position="152">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="e#1#50#0" expanded="true" />
               </folding>
@@ -167,17 +166,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/driver.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="540">
               <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/police.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="16">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -358,13 +357,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540438168910</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Test">
-      <created>1541021312271</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1541021312271</updated>
     </task>
     <task id="LOCAL-00002" summary="1">
       <created>1541021799736</created>
@@ -695,7 +687,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541640280342</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Updated html">
+      <created>1543370527611</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1543370527612</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Maintenance transaction test">
+      <created>1543371122224</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1543371122224</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -765,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test" />
     <MESSAGE value="1" />
     <MESSAGE value="Testing hmtl  update" />
     <MESSAGE value="Table for police.html test" />
@@ -789,7 +794,9 @@
     <MESSAGE value="First Test of everything working part 2" />
     <MESSAGE value="Update driver view" />
     <MESSAGE value="Fixed driver endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed driver endpoint" />
+    <MESSAGE value="Updated html" />
+    <MESSAGE value="Maintenance transaction test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maintenance transaction test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/base.html" />
@@ -839,27 +846,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-          <folding>
-            <element signature="e#1#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/driver.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
+        <state relative-caret-position="540">
           <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/police.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="16" selection-end-column="10" />
+        <state relative-caret-position="16">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
