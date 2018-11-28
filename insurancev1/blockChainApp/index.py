@@ -26,6 +26,10 @@ def driver():
     headers3 = {'Content-type': 'application/json'}
     data3 = '{"$class": "org.seniordesign.dailylog.CreateDailyLog", "timeSubmitted": "2018-11-28T01:18:27.225Z", "avgSpeed": 70, "totalDriveTimeMins": 240, "avgBrakingForce": 24, "avgAccelerationForce": 30, "VIN": "93617"}'
 
+    url4 = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
+    headers4 = {'Content-type': 'application/json'}
+    data4 =  '{"$class": "org.seniordesign.maintenance.CreateMaintenanceLog", "service": "OIL_CHANGE", "time": "2018-11-28T02:06:06.827Z", "mechID": "2421", "VIN": "93617"}'
+
     if request.method == 'POST':
         requests.post(url, data=data, headers=headers)
         requests.post(url2, data=data2, headers=headers2)
@@ -45,10 +49,14 @@ def police():
 
     url2 = 'http://localhost:3000/api/org.seniordesign.dailylog.CreateDailyLog'
     response2 = requests.get(url2)
-    data = response2.json()
+    data2 = response2.json()
+
+    url3 = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
+    response3 = requests.get(url3)
+    data3 = response3.json()
 
 
-    return  render_template('police.html', data=data)
+    return  render_template('police.html', data=data, data2=data2, data3=data3)
 
 
 @app.route('/insurance', methods=['GET'])
