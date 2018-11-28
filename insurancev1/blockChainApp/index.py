@@ -45,10 +45,10 @@ def police():
 
     url2 = 'http://localhost:3000/api/org.seniordesign.dailylog.CreateDailyLog'
     response2 = requests.get(url2)
-    data2 = response2.json()
+    data = response2.json()
 
 
-    return  render_template('police.html', data=data, data2=data2)
+    return  render_template('police.html', data=data)
 
 
 @app.route('/insurance', methods=['GET'])
