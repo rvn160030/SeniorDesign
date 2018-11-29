@@ -19,7 +19,6 @@ def index():
 def driver():
     form = VehicleForm(request.form)
     if request.method == 'POST' and form.validate():
-        id = form.id.data
         vin = form.vin.data
         type = form.type.data
 
