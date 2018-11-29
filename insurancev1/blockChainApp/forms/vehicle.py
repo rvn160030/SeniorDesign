@@ -1,4 +1,4 @@
-from wtforms import Form, StringField, validators, HiddenField, SelectMultipleField, widgets
+from wtforms import Form, StringField, validators, SelectMultipleField, widgets
 
 class MultiCheckboxField(SelectMultipleField):
     widget = widgets.ListWidget(prefix_label=False)
@@ -6,7 +6,6 @@ class MultiCheckboxField(SelectMultipleField):
 
 
 class VehicleForm(Form):
-    id = HiddenField("org.seniordesign.vehicle.Vehicle")
     vin = StringField('VIN', [validators.Length(min=1, max=10)])
 
     string_of_types = ['TRUCK\r\nSUV\r\nVAN\r\nMINIVAN\r\nWAGON\r\nSEDAN\r\nCOUPE\r\nCABRIOLET\r\nROADSTER']
