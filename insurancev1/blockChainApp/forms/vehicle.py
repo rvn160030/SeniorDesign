@@ -1,5 +1,5 @@
-from wtforms import StringField, validators, SelectField, Form
-
+from wtforms import StringField, validators, SelectField
+from flask_wtf import Form
 
 
 
