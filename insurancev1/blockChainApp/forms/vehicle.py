@@ -1,4 +1,4 @@
-from wtforms import StringField, validators, SelectField, Form
+from wtforms import StringField, validators, SelectField, Form, SubmitField
 
 
 
@@ -7,4 +7,5 @@ class VehicleForm(Form):
     type = SelectField('Type', choices=[('TRUCK', 'Truck'), ('SUV', 'Suv'), ('VAN', 'Van'), ('MINIVAN', 'Minivan'),
                                         ('WAGON', 'Wagon'), ('SEDAN', 'Sedan'), ('COUPE', 'Coupe'), ('CABRIOLET', 'Cabriolet'),
                                         ('ROADSTER', 'Roadster')])
+    submit1 = SubmitField('Submit')
 
