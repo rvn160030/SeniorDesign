@@ -1,37 +1,15 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-
-   <table>
-       <tr>
-          <th>Type</th>
-          <th>VIN</th>
-      </tr>
-      <tr>
-          <td> {{ data['type'] }} </td>
-          <td> {{ data['VIN'] }} </td>
-      </tr>
-  </table>
-
-  <table>
-       <tr>
-           <th>Time</th>
-           <th>Speed</th>
-           <th>Passengers</th>
-           <th>Airbag Deployment</th>
-           <th>VIN</th>
-      </tr>
-      <tr>
-          <td> {{ data2['time'] }} </td>
-          <td> {{ data2['speed'] }} </td>
-          <td> {{ data2['passengers'] }} </td>
-          <td> {{ data2['airbagDeployment'] }} </td>
-          <td> {{ data2['VIN'] }} </td>
-      </tr>
-  </table>
-
-  <form action="" method="POST">
-      <p>Do you consent to have your information shared?</p>
-      <input type="submit">
+<h1>Register Vehicle</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.vin, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.type, class_="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
   </form>
 {% endblock %}
