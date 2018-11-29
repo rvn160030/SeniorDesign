@@ -1,4 +1,5 @@
-from wtforms import Form, StringField, validators, SelectMultipleField, widgets
+from wtforms import StringField, validators, SelectMultipleField, widgets
+from flask_wtf import Form
 
 class MultiCheckboxField(SelectMultipleField):
     widget = widgets.ListWidget(prefix_label=False)
