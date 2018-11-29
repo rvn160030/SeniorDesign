@@ -8,18 +8,10 @@
            <th>crashLog</th>
            <th>maintenanceLog</th>
       </tr>
-      <tr>
-            <th>dailyLog</th>
-      </tr>
   {% for value in data %}
       <tr>
           <td> {{ value['type'] }} </td>
           <td> {{ value['VIN'] }} </td>
-          <td> {{ value['crashLog'] }} </td>
-          <td> {{ value['maintenanceLog'] }} </td>
-      </tr>
-      <tr>
-          <td> {{ value['dailyLog'] }} </td>
       </tr>
   {%  endfor %}
   </table>
