@@ -1,11 +1,13 @@
 
 from flask import render_template, Flask, request
+from flask_bootstrap import Bootstrap
 import requests
 import json
 from forms.vehicle import VehicleForm
 
 
 app = Flask(__name__)
+Bootstrap(app)
 app.secret_key = "123456"
 
 
