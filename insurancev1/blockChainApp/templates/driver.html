@@ -4,6 +4,10 @@
 
 {% block body %}
 
-    {{ wtf.quick_form(form) }}
+    <h1>Vehicle Registration</h1>
+    <form method="POST" action="">
+        {{ wtf.quick_form(form) }}
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
 
 {% endblock %}
