@@ -122,7 +122,7 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="html" value="1021" />
-          <entry key="py" value="3058" />
+          <entry key="py" value="3065" />
           <entry key="txt" value="524" />
         </counts>
       </usages-collector>
@@ -130,7 +130,7 @@
         <counts>
           <entry key="HTML" value="1021" />
           <entry key="PLAIN_TEXT" value="539" />
-          <entry key="Python" value="3058" />
+          <entry key="Python" value="3065" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -154,8 +154,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="375">
+              <caret line="34" column="132" selection-start-line="34" selection-start-column="132" selection-end-line="34" selection-end-column="132" />
               <folding>
                 <element signature="e#1#50#0" expanded="true" />
               </folding>
@@ -355,20 +355,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540438168910</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Fixed driver endpoint">
-      <created>1541638947760</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1541638947760</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Fixed driver endpoint">
-      <created>1541639024108</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1541639024108</updated>
     </task>
     <task id="LOCAL-00041" summary="Fixed driver endpoint">
       <created>1541639055258</created>
@@ -699,7 +685,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543960279724</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="First form test">
+      <created>1543960757676</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1543960757676</updated>
+    </task>
+    <task id="LOCAL-00089" summary="First form test">
+      <created>1543960834013</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1543960834013</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -912,8 +912,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="375">
+          <caret line="34" column="132" selection-start-line="34" selection-start-column="132" selection-end-line="34" selection-end-column="132" />
           <folding>
             <element signature="e#1#50#0" expanded="true" />
           </folding>
