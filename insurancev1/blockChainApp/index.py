@@ -83,7 +83,16 @@ def driver():
 
 @app.route('/police', methods=['GET'])
 def police():
-    url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
+    url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
+    response = requests.get(url)
+    data = response.json()
+
+    return  render_template('police.html', data=data)
+
+
+@app.route('/insurance', methods=['GET'])
+def insurance():
+    url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
     response = requests.get(url)
     data = response.json()
 
@@ -95,18 +104,16 @@ def police():
     response3 = requests.get(url3)
     data3 = response3.json()
 
+    return  render_template('insurance.html', data=data, data2=data2, data3=data3)
 
-
-    return  render_template('police.html', data=data, data2=data2, data3=data3)
-
-
-@app.route('/insurance', methods=['GET'])
-def insurance():
-    url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
+@app.route('/maintenance', methods=['GET'])
+def maintenance():
+    url = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
     response = requests.get(url)
     data = response.json()
 
-    return  render_template('insurance.html', data=data)
+    return  render_template('maintenance.html', data=data)
+
 
 
 
