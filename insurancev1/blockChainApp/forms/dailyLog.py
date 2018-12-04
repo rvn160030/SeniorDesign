@@ -6,4 +6,4 @@ class DailyLogForm(Form):
     passengers = StringField('Passengers', [validators.Length(min=1, max=10)])
     airbag = SelectField('Deployed', choices=[('True', 'True'), ('False', 'False')])
     vin = StringField('VIN', [validators.Length(min=1, max=10)])
-    submit = SubmitField('Submit')
+    submit2 = SubmitField('Submit')
