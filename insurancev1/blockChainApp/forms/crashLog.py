@@ -4,6 +4,6 @@ from flask_wtf import Form
 class CrashLogForm(Form):
     speed = StringField('Speed', [validators.Length(min=1, max=10)])
     passengers = StringField('Passengers', [validators.Length(min=1, max=10)])
-    airbag = SelectField('Deployed', choices=[('True', 'True'), ('False', 'False')])
+    airbag = SelectField('Airbag Deployed', choices=[('True', 'True'), ('False', 'False')])
     vin = StringField('VIN', [validators.Length(min=1, max=10)])
     submit2 = SubmitField('Submit')

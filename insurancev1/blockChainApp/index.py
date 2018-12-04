@@ -50,6 +50,17 @@ def driver():
         return render_template('index.html')
 
     if request.method == 'POST' and form3.submit3.data and form3.validate():
+        avgSpeed = form3.avgSpeed.data
+        totalTime = form3.totalTime.data
+        brakeForce = form3.brakeForce.data
+        accForce = form3.accForce.data
+        vin = form3.vin.data
+
+        url = 'http://localhost:3000/api/org.seniordesign.dailylog.CreateDailyLog'
+        headers = {'Content-type': 'application/json'}
+        data = json.dumps({"$class": "org.seniordesign.dailylog.CreateDailyLog", "timeSubmitted": str(datetime.datetime.now()), "avgSpeed": avgSpeed, "totalDriveTimeMins": totalTime, "avgBrakingForce": brakeForce, "avgAccelerationForce": accForce, "VIN": vin}, default=str)
+
+        requests.post(url, data=data, headers=headers)
 
         return render_template('index.html')
 
