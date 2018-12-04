@@ -20,9 +20,12 @@ def index():
 def driver():
     form = VehicleForm(request.form)
     form2 = DailyLogForm(request.form)
-    if request.method == 'POST' and form.validate():
+    if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         type = form.type.data
+        return render_template('index.html')
+
+    if request.method == 'POST' and form2.submit.data and form2.validate():
 
         return render_template('index.html')
 
