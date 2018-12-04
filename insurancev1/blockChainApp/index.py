@@ -29,10 +29,10 @@ def driver():
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         vtype = form.type.data
-        vtype_parsed = json.loads(vtype)
+        print (vtype)
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": '+vin+', "vehcileType": '+vtype_parsed+'}'
+        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": '+vin+', "vehcileType": '+vtype+'}'
         requests.post(url, data=data, headers=headers)
         return render_template('index.html')
 
