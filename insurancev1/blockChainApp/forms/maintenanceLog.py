@@ -3,7 +3,7 @@ from flask_wtf import Form
 
 
 class MaintenanceLogForm(Form):
-    service = StringField('Service', [validators.Length(min=1, max=30)])
+    service = SelectField('Service', choices=[('OIL_CHANGE', 'Oil Change'), ('TIRE_ROTATION', 'Tire Rotation')])
     mechID = StringField('Mechanic ID', [validators.Length(min=1, max=10)])
     vin = StringField('VIN', [validators.Length(min=1, max=10)])
 
