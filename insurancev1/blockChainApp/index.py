@@ -13,10 +13,7 @@ app = Flask(__name__)
 Bootstrap(app)
 app.secret_key = "123456"
 
-form = VehicleForm(request.form)
-form2 = CrashLogForm(request.form)
-form3 = DailyLogForm(request.form)
-form4 = MaintenanceLogForm(request.form)
+
 
 
 @app.route('/')
@@ -25,6 +22,10 @@ def index():
 
 @app.route('/driver', methods=['GET', 'POST'])
 def driver():
+    form = VehicleForm(request.form)
+    form2 = CrashLogForm(request.form)
+    form3 = DailyLogForm(request.form)
+    form4 = MaintenanceLogForm(request.form)
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         type = form.type.data
