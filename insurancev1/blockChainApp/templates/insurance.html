@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<table>
+    <table>
        <tr>
            <th>Time</th>
            <th>Average Speed</th>
@@ -10,7 +10,7 @@
            <th>Acceleration Force</th>
            <th>VIN</th>
       </tr>
-  {% for value in data %}
+    {% for value in data %}
       <tr>
           <td> {{ value['timeSubmitted'] }} </td>
           <td> {{ value['avgSpeed'] }} </td>
@@ -19,10 +19,10 @@
           <td> {{ value['avgAccelerationForce'] }} </td>
           <td> {{ value['VIN'] }} </td>
       </tr>
-  {%  endfor %}
-  </table>
+    {%  endfor %}
+     </table>
 
-  <table>
+    <table>
        <tr>
            <th>Crash ID</th>
            <th>Time</th>
@@ -31,7 +31,7 @@
            <th>Airbag Deployment</th>
            <th>VIN</th>
       </tr>
-  {% for value in data2 %}
+    {% for value in data2 %}
       <tr>
           <td> {{ value['crashID'] }} </td>
           <td> {{ value['time'] }} </td>
@@ -40,8 +40,8 @@
           <td> {{ value['airbagDeployment'] }} </td>
           <td> {{ value['VIN'] }} </td>
       </tr>
-  {%  endfor %}
-  </table>
+    {%  endfor %}
+    </table>
 
     <table>
        <tr>
