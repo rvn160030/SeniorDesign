@@ -1,5 +1,5 @@
-from wtforms import StringField, validators, SelectField, Form, SubmitField
-
+from wtforms import StringField, validators, SelectField, SubmitField
+from flask_wtf import Form
 
 
 class VehicleForm(Form):
