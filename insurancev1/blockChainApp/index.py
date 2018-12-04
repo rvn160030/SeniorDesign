@@ -44,7 +44,7 @@ def driver():
 
         url = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
         headers = {'Content-type': 'application/json'}
-        data = {"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": datetime.datetime.now(), "speed": speed, "passengers": passengers, "VIN": vin, "airbagDeployment": airbag, "timestamp": datetime.datetime.now()}
+        data = json.dumps({"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": datetime.datetime.now(), "speed": speed, "passengers": passengers, "VIN": vin, "airbagDeployment": airbag, "timestamp": datetime.datetime.now()})
 
         requests.post(url, data=data, headers=headers)
         return render_template('index.html')
