@@ -7,5 +7,5 @@ class VehicleForm(Form):
     type = SelectField('Type', choices=[('TRUCK', 'Truck'), ('SUV', 'Suv'), ('VAN', 'Van'), ('MINIVAN', 'Minivan'),
                                         ('WAGON', 'Wagon'), ('SEDAN', 'Sedan'), ('COUPE', 'Coupe'), ('CABRIOLET', 'Cabriolet'),
                                         ('ROADSTER', 'Roadster')])
-    submit = SubmitField('Submit')
+    submit2 = SubmitField('Submit')
 
