@@ -32,9 +32,8 @@ def driver():
         print (vtype)
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": "", "type": "", "crashLog": [] }'
-        data['VIN'] = vin
-        data['type'] = vtype
+        data = {"$class": "org.seniordesign.vehicle.Vehicle", "VIN": vin, "type": vtype, "crashLog": [] }
+
 
         requests.post(url, data=data, headers=headers)
         return render_template('index.html')
