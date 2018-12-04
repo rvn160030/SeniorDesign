@@ -65,6 +65,15 @@ def driver():
         return render_template('index.html')
 
     if request.method == 'POST' and form4.submit4.data and form4.validate():
+        service = form4.service.data
+        mechID = form4.mechID.data
+        vin = form4.vin.data
+
+        url = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
+        headers = {'Content-type': 'application/json'}
+        data = json.dumps({"$class": "org.seniordesign.maintenance.CreateMaintenanceLog", "service": service, "time": str(datetime.datetime.now()), "mechID": mechID, "VIN": vin}, default=str)
+
+        requests.post(url, data=data, headers=headers)
 
         return render_template('index.html')
 
