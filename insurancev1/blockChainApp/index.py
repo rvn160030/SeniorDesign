@@ -7,7 +7,7 @@ from forms.vehicle import VehicleForm
 from forms.crashLog import CrashLogForm
 from forms.dailyLog import DailyLogForm
 from forms.maintenanceLog import MaintenanceLogForm
-
+import datetime
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -29,17 +29,24 @@ def driver():
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         vtype = form.type.data
-        print (vtype)
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
         data = json.dumps({"$class": "org.seniordesign.vehicle.Vehicle", "VIN": vin, "type": vtype, "crashLog": [] })
-
 
         requests.post(url, data=data, headers=headers)
         return render_template('index.html')
 
     if request.method == 'POST' and form2.submit2.data and form2.validate():
+        speed = form2.speed.data
+        passengers = form2.passengers.data
+        airbag = form2.airbag.data
+        vin = form2.vin.data
 
+        url = 'http://localhost:3000/api/org.seniordesign.crashLog.CreateCrashLog'
+        headers = {'Content-type': 'application/json'}
+        data = {"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": datetime.datetime.now(), "speed": speed, "passengers": passengers, "VIN": vin, "airbagDeployment": airbag, "timestamp": datetime.datetime.now()}
+
+        requests.post(url, data=data, headers=headers)
         return render_template('index.html')
 
     if request.method == 'POST' and form3.submit3.data and form3.validate():
