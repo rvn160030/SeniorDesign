@@ -2,6 +2,12 @@
 {% import  "bootstrap/wtf.html" as wtf %}
 
 {% block body %}
+  <p>Vehicle Registration</p>
   {{ wtf.quick_form(form, button_map={'submit': 'primary'}) }}
+  <p>Crash Log</p>
   {{ wtf.quick_form(form2, button_map={'submit2': 'primary'}) }}
+  <p>Daily Log</p>
+  {{ wtf.quick_form(form3, button_map={'submit3': 'primary'}) }}
+  <p>Maintenance Log</p>
+  {{ wtf.quick_form(form4, button_map={'submit4': 'primary'}) }}
 {% endblock %}

@@ -4,12 +4,19 @@ from flask_bootstrap import Bootstrap
 import requests
 import json
 from forms.vehicle import VehicleForm
+from forms.crashLog import CrashLogForm
 from forms.dailyLog import DailyLogForm
+from forms.maintenanceLog import MaintenanceLogForm
 
 
 app = Flask(__name__)
 Bootstrap(app)
 app.secret_key = "123456"
+
+form = VehicleForm(request.form)
+form2 = CrashLogForm(request.form)
+form3 = DailyLogForm(request.form)
+form4 = MaintenanceLogForm(request.form)
 
 
 @app.route('/')
@@ -18,8 +25,6 @@ def index():
 
 @app.route('/driver', methods=['GET', 'POST'])
 def driver():
-    form = VehicleForm(request.form)
-    form2 = DailyLogForm(request.form)
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         type = form.type.data
@@ -29,9 +34,17 @@ def driver():
 
         return render_template('index.html')
 
+    if request.method == 'POST' and form3.submit3.data and form3.validate():
+
+        return render_template('index.html')
+
+    if request.method == 'POST' and form4.submit4.data and form4.validate():
+
+        return render_template('index.html')
 
 
-    return  render_template('driver.html', form=form, form2=form2)
+
+    return  render_template('driver.html', form=form, form2=form2, form3=form3, form4=form4)
 
 @app.route('/police', methods=['GET'])
 def police():
