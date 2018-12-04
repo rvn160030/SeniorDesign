@@ -2,6 +2,7 @@
 from flask import render_template, Flask, request
 from flask_bootstrap import Bootstrap
 import requests
+import json
 from forms.vehicle import VehicleForm
 from forms.crashLog import CrashLogForm
 from forms.dailyLog import DailyLogForm
@@ -27,10 +28,11 @@ def driver():
     form4 = MaintenanceLogForm(request.form)
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
-        type = form.type.data
+        vtype = form.type.data
+        vtype_parsed = json.loads(vtype)
         url = 'http://localhost:3000/api/org.seniordesign.vehicle.Vehicle'
         headers = {'Content-type': 'application/json'}
-        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": '+vin+', "vehcileType": '+type+'}'
+        data = '{"$class": "org.seniordesign.vehicle.Vehicle", "VIN": '+vin+', "vehcileType": '+vtype_parsed+'}'
         requests.post(url, data=data, headers=headers)
         return render_template('index.html')
 
