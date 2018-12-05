@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed892bf2-a068-4338-905a-ca3c24f9aad1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/crashLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/crashLog.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +123,7 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="html" value="1069" />
-          <entry key="py" value="3675" />
+          <entry key="py" value="3869" />
           <entry key="txt" value="563" />
         </counts>
       </usages-collector>
@@ -130,35 +131,48 @@
         <counts>
           <entry key="HTML" value="1069" />
           <entry key="PLAIN_TEXT" value="578" />
-          <entry key="Python" value="3675" />
+          <entry key="Python" value="3869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bna" value="1" />
           <entry key="html" value="25" />
-          <entry key="py" value="18" />
+          <entry key="py" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="25" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="19" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="109" column="54" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
+            <state relative-caret-position="75">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#1#50#0" expanded="true" />
-                <marker date="1544041096998" expanded="true" signature="3563:4403" ph="..." />
+                <element signature="e#1#69#0" expanded="true" />
+                <marker date="1544041333563" expanded="true" signature="3582:4471" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forms/crashLog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#80#0" expanded="true" />
+                <marker date="1544042813252" expanded="true" signature="134:139" ph="..." />
               </folding>
             </state>
           </provider>
@@ -234,13 +248,13 @@
         <option value="$PROJECT_DIR$/forms/dailyLog.py" />
         <option value="$PROJECT_DIR$/forms/vehicle.py" />
         <option value="$PROJECT_DIR$/forms/maintenanceLog.py" />
-        <option value="$PROJECT_DIR$/forms/crashLog.py" />
         <option value="$PROJECT_DIR$/templates/includes/_navbar.html" />
         <option value="$PROJECT_DIR$/templates/police.html" />
         <option value="$PROJECT_DIR$/templates/insurance.html" />
         <option value="$PROJECT_DIR$/templates/driver.html" />
         <option value="$PROJECT_DIR$/templates/maintenance.html" />
         <option value="$PROJECT_DIR$/index.py" />
+        <option value="$PROJECT_DIR$/forms/crashLog.py" />
       </list>
     </option>
   </component>
@@ -381,20 +395,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540438168910</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Added vehicle registration">
-      <created>1543526728662</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1543526728662</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Added vehicle registration">
-      <created>1543527572114</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1543527572114</updated>
     </task>
     <task id="LOCAL-00060" summary="Added vehicle registration">
       <created>1543527714059</created>
@@ -725,7 +725,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544040779186</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Updated Maintenance">
+      <created>1544041099854</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1544041099854</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Updated Maintenance">
+      <created>1544041335441</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1544041335442</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -887,17 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/crashLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-            <marker date="1543964029291" expanded="true" signature="122:127" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1247971763/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -952,11 +955,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="109" column="54" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
+        <state relative-caret-position="75">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
           <folding>
-            <element signature="e#1#50#0" expanded="true" />
-            <marker date="1544041096998" expanded="true" signature="3563:4403" ph="..." />
+            <element signature="e#1#69#0" expanded="true" />
+            <marker date="1544041333563" expanded="true" signature="3582:4471" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms/crashLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+            <marker date="1544042813252" expanded="true" signature="134:139" ph="..." />
           </folding>
         </state>
       </provider>
