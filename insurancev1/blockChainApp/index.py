@@ -25,7 +25,6 @@ def driver():
     form = VehicleForm(request.form)
     form2 = CrashLogForm(request.form)
     form3 = DailyLogForm(request.form)
-    form4 = MaintenanceLogForm(request.form)
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         vtype = form.type.data
@@ -64,22 +63,7 @@ def driver():
 
         return render_template('index.html')
 
-    if request.method == 'POST' and form4.submit4.data and form4.validate():
-        service = form4.service.data
-        mechID = form4.mechID.data
-        vin = form4.vin.data
-
-        url = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
-        headers = {'Content-type': 'application/json'}
-        data = json.dumps({"$class": "org.seniordesign.maintenance.CreateMaintenanceLog", "service": service, "time": str(datetime.datetime.now()), "mechID": mechID, "VIN": vin}, default=str)
-
-        requests.post(url, data=data, headers=headers)
-
-        return render_template('index.html')
-
-
-
-    return  render_template('driver.html', form=form, form2=form2, form3=form3, form4=form4)
+    return  render_template('driver.html', form=form, form2=form2, form3=form3)
 
 @app.route('/police', methods=['GET'])
 def police():
@@ -112,7 +96,22 @@ def maintenance():
     response = requests.get(url)
     data = response.json()
 
-    return  render_template('maintenance.html', data=data)
+    form = MaintenanceLogForm(request.form)
+
+    if request.method == 'POST' and form4.submit4.data and form4.validate():
+        service = form.service.data
+        mechID = form.mechID.data
+        vin = form.vin.data
+
+        url = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
+        headers = {'Content-type': 'application/json'}
+        data = json.dumps({"$class": "org.seniordesign.maintenance.CreateMaintenanceLog", "service": service, "time": str(datetime.datetime.now()), "mechID": mechID, "VIN": vin}, default=str)
+
+        requests.post(url, data=data, headers=headers)
+
+        return render_template('maintenance.html')
+
+    return  render_template('maintenance.html', form=form)
 
 
 
