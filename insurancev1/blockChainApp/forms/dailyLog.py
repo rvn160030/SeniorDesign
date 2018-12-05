@@ -1,4 +1,4 @@
-from wtforms import StringField, validators,SelectField, SubmitField
+from wtforms import StringField, validators,RadioField, SubmitField
 from flask_wtf import Form
 
 class DailyLogForm(Form):
@@ -7,4 +7,5 @@ class DailyLogForm(Form):
     brakeForce = StringField('Braking Force', [validators.Length(min=1, max=10)])
     accForce = StringField('Acceleration Force', [validators.Length(min=1, max=10)])
     vin = StringField('VIN', [validators.Length(min=1, max=10)])
+    consent = RadioField('Consent', choices=[('Yes', 'Consent to share information')])
     submit3 = SubmitField('Submit')
