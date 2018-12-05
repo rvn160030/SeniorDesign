@@ -90,7 +90,7 @@ def insurance():
 
     return  render_template('insurance.html', data=data, data2=data2, data3=data3)
 
-@app.route('/maintenance', methods=['GET'])
+@app.route('/maintenance', methods=['GET', 'POST'])
 def maintenance():
     url = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
     response = requests.get(url)
@@ -98,7 +98,7 @@ def maintenance():
 
     form = MaintenanceLogForm(request.form)
 
-    if request.method == 'POST' and form4.submit4.data and form4.validate():
+    if request.method == 'POST' and form.submit4.data and form.validate():
         service = form.service.data
         mechID = form.mechID.data
         vin = form.vin.data
@@ -109,9 +109,7 @@ def maintenance():
 
         requests.post(url, data=data, headers=headers)
 
-        return render_template('maintenance.html')
-
-    return  render_template('maintenance.html', form=form)
+    return  render_template('maintenance.html', form=form, data=data)
 
 
 
