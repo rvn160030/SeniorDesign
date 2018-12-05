@@ -1,5 +1,5 @@
 
-from flask import render_template, Flask, request
+from flask import render_template, Flask, request, redirect, url_for
 from flask_bootstrap import Bootstrap
 import requests
 import json
@@ -108,6 +108,8 @@ def maintenance():
         data = json.dumps({"$class": "org.seniordesign.maintenance.CreateMaintenanceLog", "service": service, "time": str(datetime.datetime.now()), "mechID": mechID, "VIN": vin}, default=str)
 
         requests.post(url, data=data, headers=headers)
+
+        return redirect(url_for('maintenance'))
 
     return  render_template('maintenance.html', form=form, data=data)
 
