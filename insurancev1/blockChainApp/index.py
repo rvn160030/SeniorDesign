@@ -56,7 +56,7 @@ def driver():
         data = json.dumps({"$class": "org.seniordesign.vehicle.Vehicle", "VIN": vin, "type": vtype, "crashLog": [] })
 
         requests.post(url, data=data, headers=headers)
-        return render_template('index.html')
+        return redirect(url_for('driver'))
 
     if request.method == 'POST' and form2.submit2.data and form2.validate():
         speed = form2.speed.data
@@ -69,7 +69,7 @@ def driver():
         data = json.dumps({"$class": "org.seniordesign.crashlog.CreateCrashLog", "time": datetime.datetime.now(), "speed": speed, "passengers": passengers, "VIN": vin, "airbagDeployment": airbag, "timestamp": str(datetime.datetime.now())}, default=str)
 
         requests.post(url, data=data, headers=headers)
-        return render_template('index.html')
+        return redirect(url_for('driver'))
 
     if request.method == 'POST' and form3.submit3.data and form3.validate():
         avgSpeed = form3.avgSpeed.data
@@ -83,8 +83,7 @@ def driver():
         data = json.dumps({"$class": "org.seniordesign.dailylog.CreateDailyLog", "timeSubmitted": str(datetime.datetime.now()), "avgSpeed": avgSpeed, "totalDriveTimeMins": totalTime, "avgBrakingForce": brakeForce, "avgAccelerationForce": accForce, "VIN": vin}, default=str)
 
         requests.post(url, data=data, headers=headers)
-
-        return render_template('index.html')
+        return redirect(url_for('driver'))
 
     return  render_template('driver.html', form=form, form2=form2, form3=form3, views=views, form4=form4)
 
