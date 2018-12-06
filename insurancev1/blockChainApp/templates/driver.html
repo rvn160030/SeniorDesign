@@ -2,7 +2,7 @@
 {% import  "bootstrap/wtf.html" as wtf %}
 
 {% block body %}
-  <input type="submit" name="Data" value="Data">
+  {{ wtf.quick_form(form4, button_map={'submit4': 'primary'}) }}
   <p>Vehicle Registration</p>
   {{ wtf.quick_form(form, button_map={'submit': 'primary'}) }}
   <p>Crash Log</p>

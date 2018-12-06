@@ -7,6 +7,7 @@ from forms.vehicle import VehicleForm
 from forms.crashLog import CrashLogForm
 from forms.dailyLog import DailyLogForm
 from forms.maintenanceLog import MaintenanceLogForm
+from forms.data import DataForm
 import datetime
 
 app = Flask(__name__)
@@ -26,7 +27,8 @@ def driver():
     form = VehicleForm(request.form)
     form2 = CrashLogForm(request.form)
     form3 = DailyLogForm(request.form)
-    if request.method == 'POST' and request.form['Data'] == 'Data':
+    form4 = DataForm(request.form)
+    if request.method == 'POST' and form4.submit4.data and form4.validate():
         url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
         response = requests.get(url)
         data = response.json()
@@ -79,7 +81,7 @@ def driver():
 
         return render_template('index.html')
 
-    return  render_template('driver.html', form=form, form2=form2, form3=form3, views=views)
+    return  render_template('driver.html', form=form, form2=form2, form3=form3, views=views, form4=form4)
 
 @app.route('/police', methods=['GET'])
 def police():
