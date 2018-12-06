@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
-{{ wtf.quick_form(form5, button_map={'submit5': 'primary'}) }}
+{% import  "bootstrap/wtf.html" as wtf %}
 {% block body %}
+{{ wtf.quick_form(form5, button_map={'submit5': 'primary'}) }}
     <table>
        <tr>
            <th>Time</th>
