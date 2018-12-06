@@ -26,7 +26,7 @@ def driver():
     form = VehicleForm(request.form)
     form2 = CrashLogForm(request.form)
     form3 = DailyLogForm(request.form)
-    if request.method == 'POST' and request.form['Drivers Data'] == 'Data':
+    if request.method == 'POST' and request.form['Data'] == 'Data':
         url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
         response = requests.get(url)
         data = response.json()
