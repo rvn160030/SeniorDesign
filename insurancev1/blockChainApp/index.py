@@ -8,6 +8,7 @@ from forms.crashLog import CrashLogForm
 from forms.dailyLog import DailyLogForm
 from forms.maintenanceLog import MaintenanceLogForm
 from forms.data import DataForm
+from forms.form import FormView
 import datetime
 
 app = Flask(__name__)
@@ -28,6 +29,7 @@ def driver():
     form2 = CrashLogForm(request.form)
     form3 = DailyLogForm(request.form)
     form4 = DataForm(request.form)
+    form5 = FormView(request.form)
     if request.method == 'POST' and form4.submit4.data and form4.validate():
         url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
         response = requests.get(url)
@@ -41,7 +43,10 @@ def driver():
         response3 = requests.get(url3)
         data3 = response3.json()
 
-        return render_template('insurance.html', data=data, data2=data2, data3=data3)
+        if request.method == 'POST' and form5.submit5.data and form5.validate():
+            return redirect(url_for('driver'))
+
+        return render_template('allData.html', data=data, data2=data2, data3=data3, form5=form5)
 
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data

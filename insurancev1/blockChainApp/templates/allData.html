@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{{ wtf.quick_form(form5, button_map={'submit5': 'primary'}) }}
+{% block body %}
+    <table>
+       <tr>
+           <th>Time</th>
+           <th>Average Speed</th>
+           <th>Total Time</th>
+           <th>Braking Force</th>
+           <th>Acceleration Force</th>
+           <th>VIN</th>
+      </tr>
+    {% for value in data2 %}
+      <tr>
+          <td> {{ value['timeSubmitted'] }} </td>
+          <td> {{ value['avgSpeed'] }} </td>
+          <td> {{ value['totalDriveTimeMins'] }} </td>
+          <td> {{ value['avgBrakingForce'] }} </td>
+          <td> {{ value['avgAccelerationForce'] }} </td>
+          <td> {{ value['VIN'] }} </td>
+      </tr>
+    {%  endfor %}
+     </table>
+
+    <table>
+       <tr>
+           <th>Crash ID</th>
+           <th>Time</th>
+           <th>Speed</th>
+           <th>Passengers</th>
+           <th>Airbag Deployment</th>
+           <th>VIN</th>
+      </tr>
+    {% for value in data %}
+      <tr>
+          <td> {{ value['crashID'] }} </td>
+          <td> {{ value['time'] }} </td>
+          <td> {{ value['speed'] }} </td>
+          <td> {{ value['passengers'] }} </td>
+          <td> {{ value['airbagDeployment'] }} </td>
+          <td> {{ value['VIN'] }} </td>
+      </tr>
+    {%  endfor %}
+    </table>
+
+    <table>
+       <tr>
+           <th>Serivce</th>
+           <th>Time</th>
+           <th>mechID</th>
+           <th>VIN</th>
+      </tr>
+  {% for value in data3 %}
+      <tr>
+          <td> {{ value['service'] }} </td>
+          <td> {{ value['time'] }} </td>
+          <td> {{ value['mechID'] }} </td>
+          <td> {{ value['VIN'] }} </td>
+      </tr>
+  {%  endfor %}
+  </table>
+{% endblock %}
