@@ -22,9 +22,25 @@ def index():
 
 @app.route('/driver', methods=['GET', 'POST'])
 def driver():
+    views = ['Form', 'Drivers Data']
     form = VehicleForm(request.form)
     form2 = CrashLogForm(request.form)
     form3 = DailyLogForm(request.form)
+    if request.method == 'POST' and request.form['Drivers Data'] == 'Data':
+        url = 'http://localhost:3000/api/org.seniordesign.crashLog.CrashLog'
+        response = requests.get(url)
+        data = response.json()
+
+        url2 = 'http://localhost:3000/api/org.seniordesign.dailylog.CreateDailyLog'
+        response2 = requests.get(url2)
+        data2 = response2.json()
+
+        url3 = 'http://localhost:3000/api/org.seniordesign.maintenance.CreateMaintenanceLog'
+        response3 = requests.get(url3)
+        data3 = response3.json()
+
+        return render_template('insurance.html', data=data, data2=data2, data3=data3)
+
     if request.method == 'POST' and form.submit.data and form.validate():
         vin = form.vin.data
         vtype = form.type.data
@@ -63,7 +79,7 @@ def driver():
 
         return render_template('index.html')
 
-    return  render_template('driver.html', form=form, form2=form2, form3=form3)
+    return  render_template('driver.html', form=form, form2=form2, form3=form3, views=views)
 
 @app.route('/police', methods=['GET'])
 def police():
